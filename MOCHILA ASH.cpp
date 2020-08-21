@@ -8,26 +8,30 @@ public:
 	void abrirMochila();
 	void ingresarItem();
 	void sacarItem();
-	void cerrarMochila();
-	
+	void cerrarMochila();	
 };
 
-class Pokeballs{
-private: 
+class Objetos{
+	private: 
 	string tipo;
+	string nombre;
+	int precio;
 public:
 	int cantidad;
+	bool cantidad;
+};	
+
+
+class Pokeballs : public Objetos{
 };
 
-class Obj{
-	
+class Obj : public Objetos{
 };
 
-class ObjClave{
-	
+class ObjClave : public Objetos{
 };
 
-class MT_MO{
+class MT_MO : public Objetos{
 	
 };
 
