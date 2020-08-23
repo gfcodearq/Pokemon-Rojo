@@ -25,7 +25,7 @@ void Mochila::cerrarMochila(){
 }
 
 class Objeto{
-	protected: //atributos
+protected: //atributos
 	int numero;
 	string nombre;
 	int precio;
@@ -75,7 +75,8 @@ void Objeto::getNombre(){
 
 class Pokeball : public Objeto{
 	public:
-		Pokeball(int,string,int,int) : Objeto (numero,nombre,precio,cantidad);
+		Pokeball(int,string,int,int) : Objeto (numero,nombre,precio,cantidad){ //herencia de constructor
+		};
 };
 
 class Obj : public Objeto{
@@ -90,13 +91,12 @@ class MT_MO : public Objeto{
 
 int main(int argc, char *argv[]) {
 	
-	Objeto Obj1(006,"bicicleta",0,1);
-	Obj1.setDatos();
-	Obj1.getDatos();
 	
-	Pokeball pkbl();
-	pkbl.setDatos();
-	pkbl.getDatos();
+	
+	Pokeball Mas1(1,"Masterball",0,88);
+	Mas1.getDatos();
+
+
 	
 	return 0;
 }
