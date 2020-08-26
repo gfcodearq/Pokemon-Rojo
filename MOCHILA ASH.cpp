@@ -52,11 +52,13 @@ void Objeto::setDatos(){
 	cout<<"Numero del objeto: "<<endl;
 	cin>>numero;
 	cout<<"Cual es el nombre del objeto: "<<endl;
-	cin>>nombre;
+	cin.getline(nombre,100,'n');
 	cout<<"Cual es el precio: "<<endl;
 	cin>>precio;
 	cout<<"Cuantos ingresa: "<<endl;
 	cin>>cantidad;
+	cout<<"Ingresar Descripcion"<<ednl;
+	cin.getline(descripcion,500,'n');
 }
 
 
