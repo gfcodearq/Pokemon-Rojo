@@ -28,10 +28,11 @@ class Objeto{
 protected: //atributos
 	int numero;
 	string nombre;
+	string descripcion;
 	int precio;
 	int cantidad;
 public: //metodos
-	Objeto(int,string,int,int); //constructor		
+	Objeto(int,string,string,int,int); //constructor		
 	void setDatos(); //setters
 	void getNombre(); //getters
 	void getPrecio(); //getterts
@@ -39,7 +40,8 @@ public: //metodos
 	bool verificar_cantidad();
 };	
 
-Objeto::Objeto(int _numero,string _nombre, int _precio,int _cantidad){ //constructor
+Objeto::Objeto(int _numero,string _nombre,string _descripcion, int _precio,int _cantidad){ //constructor
+	descripcion = _descripcion;
 	numero = _numero;
 	nombre = _nombre;
 	precio = _precio;
@@ -59,8 +61,9 @@ void Objeto::setDatos(){
 
 
 void Objeto::getDatos(){
-	cout<<"N°: "<<numero<<endl;
+	cout<<"NÂ°: "<<numero<<endl;
 	cout<<"Nombre: "<<nombre<<endl;
+	cout<<"Descripcion: "<<descripcion<<endl;
 	cout<<"Precio: "<<precio<<endl;
 	cout<<"Cantidad: "<<cantidad<<endl;
 }
@@ -75,8 +78,13 @@ void Objeto::getNombre(){
 
 class Pokeball : public Objeto{
 	public:
-		Pokeball(int,string,int,int) : Objeto (numero,nombre,precio,cantidad){ //herencia de constructor
+		Pokeball(int,string,string,int,int) : Objeto (numero,nombre,descripcion,precio,cantidad){ //herencia de constructor
 		};
+	void setDatos(); //setters
+	void getNombre(); //getters
+	void getPrecio(); //getterts
+	void getDatos(); //getters
+	bool verificar_cantidad();
 };
 
 class Obj : public Objeto{
