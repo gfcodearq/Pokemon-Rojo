@@ -57,13 +57,21 @@ void Objeto::setDatos(){
 	cin>>precio;
 	cout<<"Cuantos ingresa: "<<endl;
 	cin>>cantidad;
+<<<<<<< HEAD
+	cout<<"Ingresar Descripcion"<<endl;
+=======
 	cout<<"Ingresar Descripcion"<<ednl;
+>>>>>>> 5a48dea41269c8798774e9aa5203b029ea39a9b5
 	cin.getline(descripcion,500,'n');
 }
 
 
 void Objeto::getDatos(){
+<<<<<<< HEAD
+	cout<<"N°: "<<numero<<endl;
+=======
 	cout<<"NÂ°: "<<numero<<endl;
+>>>>>>> 5a48dea41269c8798774e9aa5203b029ea39a9b5
 	cout<<"Nombre: "<<nombre<<endl;
 	cout<<"Descripcion: "<<descripcion<<endl;
 	cout<<"Precio: "<<precio<<endl;
@@ -103,7 +111,11 @@ int main(int argc, char *argv[]) {
 	
 	
 	
+<<<<<<< HEAD
+	Pokeball Mas1(1,"Masterball","pokebolla mejor",0,88);
+=======
 	Pokeball Mas1(1,"Masterball",0,88);
+>>>>>>> 5a48dea41269c8798774e9aa5203b029ea39a9b5
 	Mas1.getDatos();
 
 
