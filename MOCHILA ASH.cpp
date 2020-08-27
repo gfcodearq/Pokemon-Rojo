@@ -27,12 +27,12 @@ void Mochila::cerrarMochila(){
 class Objeto{
 protected: //atributos
 	int numero;
-	string nombre;
-	string descripcion;
+	char[50] nombre;
+	char[200] descripcion;
 	int precio;
 	int cantidad;
 public: //metodos
-	Objeto(int,string,string,int,int); //constructor		
+	Objeto(int,char[50],char[200],int,int); //constructor		
 	void setDatos(); //setters
 	void getNombre(); //getters
 	void getPrecio(); //getterts
@@ -40,7 +40,7 @@ public: //metodos
 	bool verificar_cantidad();
 };	
 
-Objeto::Objeto(int _numero,string _nombre,string _descripcion, int _precio,int _cantidad){ //constructor
+Objeto::Objeto(int _numero,char[50] _nombre,char[200] _descripcion, int _precio,int _cantidad){ //constructor
 	descripcion = _descripcion;
 	numero = _numero;
 	nombre = _nombre;
@@ -57,21 +57,16 @@ void Objeto::setDatos(){
 	cin>>precio;
 	cout<<"Cuantos ingresa: "<<endl;
 	cin>>cantidad;
-<<<<<<< HEAD
 	cout<<"Ingresar Descripcion"<<endl;
-=======
 	cout<<"Ingresar Descripcion"<<ednl;
->>>>>>> 5a48dea41269c8798774e9aa5203b029ea39a9b5
 	cin.getline(descripcion,500,'n');
 }
 
 
 void Objeto::getDatos(){
-<<<<<<< HEAD
-	cout<<"N�: "<<numero<<endl;
-=======
+	
 	cout<<"N°: "<<numero<<endl;
->>>>>>> 5a48dea41269c8798774e9aa5203b029ea39a9b5
+	cout<<"N°: "<<numero<<endl;
 	cout<<"Nombre: "<<nombre<<endl;
 	cout<<"Descripcion: "<<descripcion<<endl;
 	cout<<"Precio: "<<precio<<endl;
@@ -88,7 +83,7 @@ void Objeto::getNombre(){
 
 class Pokeball : public Objeto{
 	public:
-		Pokeball(int,string,string,int,int) : Objeto (numero,nombre,descripcion,precio,cantidad){ //herencia de constructor
+		Pokeball(int,char[50],char[200],int,int) : Objeto (numero,nombre,descripcion,precio,cantidad){ //herencia de constructor
 		};
 	void setDatos(); //setters
 	void getNombre(); //getters
@@ -111,11 +106,11 @@ int main(int argc, char *argv[]) {
 	
 	
 	
-<<<<<<< HEAD
+
 	Pokeball Mas1(1,"Masterball","pokebolla mejor",0,88);
-=======
+
 	Pokeball Mas1(1,"Masterball",0,88);
->>>>>>> 5a48dea41269c8798774e9aa5203b029ea39a9b5
+
 	Mas1.getDatos();
 
 
