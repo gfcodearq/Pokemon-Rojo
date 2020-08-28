@@ -80,7 +80,7 @@ void Objeto::getNombre(){
 	cout<<"Nombre: "<<nombre<<endl;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 class Pokeball : public Objeto{
 	public:
@@ -108,7 +108,7 @@ void Pokeball::getDatosPkb(){
 	getDatos();
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class Obj : public Objeto{
 	public:
 	Obj(int,string,string,int,int);
@@ -118,7 +118,7 @@ class Obj : public Objeto{
 	void getDatosObj();
 };
 
-Obj::Obj(int _numero,string _nombre,string _descripcion, int precio, int cantidad) : Objeto(_numero,_nombre,_descripcion,_precio,_cantidad){
+Obj::Obj(int _numero,string _nombre,string _descripcion, int _precio, int _cantidad) : Objeto(_numero,_nombre,_descripcion,_precio,_cantidad){
 	
 }
 void Obj::setDatosObj(){
@@ -134,20 +134,67 @@ void Obj::getDatosObj(){
 	getDatos();
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 class ObjClave : public Objeto{
+public:
+	ObjClave(int,string,string,int,int);
+	void setDatosOc();
+	void getNombreOc();
+	void getPrecioOc();
+	void getDatosOc();
 };
 
+ObjClave::ObjClave(int _numero,string _nombre,string _descripcion,int _precio,int _cantidad) : Objeto(_numero,_nombre,_descripcion,_precio,_cantidad){	
+}
+
+void ObjClave::setDatosOc(){
+	setDatos();
+}
+
+void ObjClave::getNombreOc(){
+	getNombre();
+}
+
+void ObjClave::getPrecioOc(){
+	getPrecio();
+}
+
+void ObjClave::getDatosOc(){
+	getDatos();
+}
+
 class MT_MO : public Objeto{
-	
+public:
+	MT_MO(int,string,string,string,int);
+	void setDatosMt();
+	void getNombreMt();
+	void getPrecioMt();
+	void getDatosMt();
 };
+
+MT_MO::MT_MO(int _numero,string _nombre,string _descripcion,int _precio,int _cantidad) : Objeto(_numero,_nombre,_descripcion,_precio,_cantidad){	
+}
+
+void MT_MO::setDatosMt(){
+	setDatos();
+}
+
+void MT_MO::getNombreMt(){
+	getNombre();
+}
+
+void MT_MO::getPrecioMt(){
+	getPrecio();
+}
+
+void MT_MO::getDatosMt(){
+	getDatos();
+}
 
 int main(int argc, char *argv[]) {
 	
 	
-Obj mb1(1,"Masterball","asdasd",0,99);
-	mb1.setDatosObj();
-	mb1.getDatosObj();
+
 	
 	
 
