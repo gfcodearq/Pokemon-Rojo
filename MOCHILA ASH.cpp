@@ -165,7 +165,7 @@ void ObjClave::getDatosOc(){
 
 class MT_MO : public Objeto{
 public:
-	MT_MO(int,string,string,string,int);
+	MT_MO(int,string,string,int,int);
 	void setDatosMt();
 	void getNombreMt();
 	void getPrecioMt();
@@ -194,6 +194,8 @@ void MT_MO::getDatosMt(){
 int main(int argc, char *argv[]) {
 	
 	
+MT_MO impact_trueno(2,"impactTrueno","electrico",2,99);
+impact_trueno.setDatosMt();
 
 	
 	
