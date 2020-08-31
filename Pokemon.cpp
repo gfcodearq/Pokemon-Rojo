@@ -61,14 +61,21 @@ void Pokemon::recibirDanio(){
 }
 
 void Pokemon::playsonido(){
-	
+	cout<<sonido<<endl;
 }
+
+class PokemonHoenn :public Pokemon{
+	public:
+		PokemonHoenn();
+		void playsonido{cout<<"Pika Pika pi"<<endl;}
+};
 
 int main(int argc, char *argv[]) {	
-	Pokemon Pikachu("Pikachu","Electrico",6,0.4,5,31,"Pika Pika");
+
+	Pokemon *Pikachu = new PokemonHoenn();
+	Pokemon->playsonido(PokemonHoenn);
+	//Pokemon Pikachu("Pikachu","Electrico",6,0.4,5,31,"Pika Pika");
 	//Pokemon Bulbasor("Bulbasaur","Semilla",6.9,0.7,31,"Bulbasaur");
-	Pikachu.getDatos();
+	//Pikachu.getDatos();
 	return 0;
 }
-
-
