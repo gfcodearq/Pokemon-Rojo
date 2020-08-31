@@ -21,7 +21,7 @@ public:
 	virtual void playsonido();		
 };
 
-Pokemon::Pokemon(string _nombre,string _tipo,float _peso,float _altura,int _nivel, int _ps, string _sonido){
+Pokemon::Pokemon(string _nombre,string _tipo,float _peso,float _altura,int _nivel, int _ps, string _sonido){ //constructor
 	nombre = _nombre;
 	tipo = _tipo;
 	peso = _peso;
@@ -31,7 +31,7 @@ Pokemon::Pokemon(string _nombre,string _tipo,float _peso,float _altura,int _nive
 	sonido = _sonido;
 }
 
-void Pokemon::setDatos(){
+void Pokemon::setDatos(){ //setters
 	cout<<"Digite el nombre: "<<endl;
 	cin>>nombre;
 	cout<<"Digite su peso: "<<endl;
@@ -45,7 +45,7 @@ void Pokemon::setDatos(){
 	cout<<"Cual es el sonido"<<endl;
 }
 
-void Pokemon::getDatos(){
+void Pokemon::getDatos(){ //getters
 	cout<<"Nombre: "<<nombre<<endl;
 	cout<<"Peso: "<<peso<<"Kg"<<endl;
 	cout<<"Altura: "<<altura<<"cm"<<endl;
@@ -64,16 +64,23 @@ void Pokemon::playsonido(){
 	cout<<sonido<<endl;
 }
 
-class PokemonHoenn :public Pokemon{
+class PokemonHoenn : public Pokemon{
 	public:
-		PokemonHoenn();
-		void playsonido{cout<<"Pika Pika pi"<<endl;}
+		PokemonHoenn(string,string,float,float,int,int,string);
+		void playsonido();
 };
+
+PokemonHoenn::PokemonHoenn (string _nombre,string _tipo,float _peso,float _altura,int _nivel, int _ps, string _sonido): Pokemon (_nombre,_tipo,_peso,_altura,_nivel,_ps,_sonido){	
+}
+
+void PokemonHoenn::playsonido(){
+	Pokemon::playsonido();
+}
 
 int main(int argc, char *argv[]) {	
 
-	Pokemon *Pikachu = new PokemonHoenn();
-	Pokemon->playsonido(PokemonHoenn);
+	Pokemon *Pikachu = new PokemonHoenn("Pikachu","Electrico",4.5,5.5,5,35,"Pikaaachu");
+	
 	//Pokemon Pikachu("Pikachu","Electrico",6,0.4,5,31,"Pika Pika");
 	//Pokemon Bulbasor("Bulbasaur","Semilla",6.9,0.7,31,"Bulbasaur");
 	//Pikachu.getDatos();
