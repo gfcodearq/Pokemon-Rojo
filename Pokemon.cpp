@@ -65,15 +65,30 @@ void Pokemon::playsonido(){
 }
 
 class PokemonHoenn : public Pokemon{
+<<<<<<< HEAD
+public:
+	PokemonHoenn(string,string,float,float,int,int,string);
+	void playsonido();
+=======
 	public:
 		PokemonHoenn(string,string,float,float,int,int,string);
 		void playsonido();
+>>>>>>> ca1a8c777a48a937a0fcef3642f7e311a6585e83
 };
 
 PokemonHoenn::PokemonHoenn (string _nombre,string _tipo,float _peso,float _altura,int _nivel, int _ps, string _sonido): Pokemon (_nombre,_tipo,_peso,_altura,_nivel,_ps,_sonido){	
 }
 
 void PokemonHoenn::playsonido(){
+<<<<<<< HEAD
+	cout<<"Pika pika pi";
+}
+
+int main(int argc, char *argv[]) {	
+	
+	Pokemon *Pikachu = new PokemonHoenn("Pikachu","Electrico",4.5,5.5,5,35,"Pikachuuu");
+	Pikachu->playsonido();
+=======
 	Pokemon::playsonido();
 }
 
@@ -81,8 +96,13 @@ int main(int argc, char *argv[]) {
 
 	Pokemon *Pikachu = new PokemonHoenn("Pikachu","Electrico",4.5,5.5,5,35,"Pikaaachu");
 	
+>>>>>>> ca1a8c777a48a937a0fcef3642f7e311a6585e83
 	//Pokemon Pikachu("Pikachu","Electrico",6,0.4,5,31,"Pika Pika");
 	//Pokemon Bulbasor("Bulbasaur","Semilla",6.9,0.7,31,"Bulbasaur");
 	//Pikachu.getDatos();
 	return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ca1a8c777a48a937a0fcef3642f7e311a6585e83
